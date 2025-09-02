@@ -43,6 +43,7 @@ func main() {
 		peterson.Unlock(0)
 	}()
 
+	time.Sleep(100 * time.Millisecond)
 	go func() {
 		defer wg.Done()
 		peterson.Lock(1)
